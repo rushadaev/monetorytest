@@ -51,11 +51,11 @@ export default defineComponent({
       store.setFoundTags([])
     }
 
-    const updateModalOpen = (value) => {
+    const updateModalOpen = (value:boolean) => {
       isModalOpen.value = value
     }
 
-    const selectTag = (tag, $event) => {
+    const selectTag = (tag: TagType) => {
       if(selectedTags.value.length < 20)
       {
         let dataToUpdate = [...store.selectedTags];
@@ -70,15 +70,15 @@ export default defineComponent({
       }
     }
 
-    const removeTag = (index) => {
+    const removeTag = (index: number) => {
       let dataToUpdate = [...store.selectedTags];
       dataToUpdate.splice(index, 1)
       store.setSelectedTags(dataToUpdate);
     }
 
-    const updateSearch = (value) => {
+    const updateSearch = (value: string) => {
       search.value = value.toLowerCase();
-      let foundedTags = [];
+      let foundedTags:TagType[];
       if(search.value.length > 0 ) {
         foundedTags = tags.value.filter(tag => {
           return tag.name.toLowerCase().includes(search.value) || tag.aliases.filter(alias => alias.toLowerCase().includes(search.value)).length > 0;

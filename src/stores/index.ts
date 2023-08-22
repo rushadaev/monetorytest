@@ -3,22 +3,22 @@ import { defineStore } from 'pinia'
 export const useStore = defineStore({
     id: 'main',
     state: () => ({
-        tags: [] as string[],
-        foundTags: [] as string[],
-        selectedTags: [] as string[],
-        savedTags: [] as string[],
+        tags: [] as TagType[],
+        foundTags: [] as TagType[],
+        selectedTags: [] as TagType[],
+        savedTags: [] as TagType[],
     }),
     actions: {
-        setTags(tags: string[]) {
+        setTags(tags: TagType[]) {
             this.tags = tags
         },
-        setFoundTags(tags: string[]) {
+        setFoundTags(tags: TagType[]) {
             this.foundTags = tags
         },
-        setSelectedTags(tags: string[]) {
+        setSelectedTags(tags: TagType[]) {
             this.selectedTags = tags
         },
-        setSavedTags(tags: string[]) {
+        setSavedTags(tags: TagType[]) {
             this.savedTags = tags
         }
     }
