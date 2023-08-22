@@ -1,0 +1,145 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color: rgba(0, 0, 0, 0.87);
+  background-color: #fff;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 8px 16px;
+  min-width: 110px;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #862FDE;
+  color: #fff;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button.neutral{
+  background: #F6F6F9;
+  color: #16171B;
+}
+button.tag{
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px; /* 114.286% */
+  color: #404144;
+  min-width: unset;
+  height: 32px;
+  padding: 4px 12px;
+  border-radius: 4px;
+  background: #F6F6F9;
+}
+button:hover {
+  border-color: rgba(134, 47, 222, 0.62);
+}
+button:focus,
+button:focus-visible {
+  border-color: rgb(180, 111, 255);
+}
+
+.card {
+  padding: 2em;
+}
+
+#app {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+
+.modal-body{
+  width: 100%;
+  text-align: left;
+}
+.modal-footer{
+  width: 100%;
+  text-align: left;
+  padding: 40px 40px 20px 40px;
+  border-top: 1px solid #ECEDF2;
+}
+.modal-header{
+  width: 100%;
+  text-align: left;
+  padding: 40px 40px 20px 40px;
+  border-bottom: 1px solid #ECEDF2;
+  h2{
+    color: #16171B;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 20px; /* 125% */
+  }
+  p{
+    color: #8C8F97;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px; /* 142.857% */
+
+    b{
+      color: #404144;
+    }
+  }
+}
+
+@keyframes shake {
+  0% { transform: translate(0, 0); }
+  10%, 30%, 50%, 70%, 90% { transform: translate(-10px, 0); }
+  20%, 40%, 60%, 80% { transform: translate(10px, 0); }
+  100% { transform: translate(0, 0); }
+}
+
+.shake{
+  animation: shake 0.5s infinite;
+}
+
+@keyframes warning {
+  0% { opacity: 1; }
+  10%, 30%, 50%, 70%, 90% { opacity: 0.5 }
+  20%, 40%, 60%, 80% { opacity: 0.3 }
+  100% { opacity: 1 }
+}
+
+.warning{
+  animation: warning 1s infinite;
+}
